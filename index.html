@@ -2,12 +2,42 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>resume generat</title>
+    <title>title</title>
   <style type="text/css">
-   
-  </style>
+     $(function(){
+      
+      $('button').click(function(){
+
+        var name = $("#name").val()
+        var interest = $("interest").val()
+        var accoplishment = $("accomplishment").val()
+        var adj = $("#adj").val()
+        
+        
+        var story = "This is the resume of " +
+                    name + ". " + "They like " + 
+                    interest + ". " + " They have accomplished " 
+                    + accomplishment + ". " + " So take your time and look at this "
+                    + adj + "resume.";
+        
+        $("button").click(function(){
+          $("p").html(story);
+        });
+        
+      });
+      
+    });
+ </style>
   </head>
   <body>
+  Whats your name?: <input id="name"><br>
+  What interess you?: <input id="interest"><br>
+  What have you accomplished?: <input id="accomplishment"><br>
+  Give me an adjective.: <input id="adj"><br>
+  <button>Create resume!</button>
   
+  <p></p>
   </body>
 </html>
+
+  
